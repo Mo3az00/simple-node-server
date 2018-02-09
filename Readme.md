@@ -236,9 +236,17 @@ server {
 }
 ```
 
+## Allow longer hostnames
+
+Open the config file:  
+```sudo nano /etc/nginx/nginx.conf```
+
+Uncomment the following line and change the value from "64" to "128":  
+```server_names_hash_bucket_size 128;```
+
 ## Configure boilerplate apllication
 
-Add a new config file for our application:
+Add a new config file for our application:  
 ```sudo nano expressjs-bootstrap-boilerplate.your-domain.com```
 
 Paste __and edit__ the following content:  
@@ -270,7 +278,7 @@ Change to the enabled sites folder:
 ```cd /etc/nginx/sites-enabled/```
 
 Create a symlink for the new configuration:  
-```ln -s ../sites-available/expressjs-bootstrap-boilerplate.your-domain.com```
+```sudo ln -s ../sites-available/expressjs-bootstrap-boilerplate.your-domain.com```
 
 Check if the nginx config is still okay:  
 ```sudo service nginx configtest```
@@ -280,3 +288,9 @@ If it says "[ok]" everything is nice.
 
 Restart the nginx server:  
 ```sudo service nginx restart```
+
+Start the Node.js application:  
+```
+cd /var/www/node/expressjs-bootstrap-boilerplate
+node ./app.js
+```
