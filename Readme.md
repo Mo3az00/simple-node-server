@@ -1,3 +1,8 @@
+# WORK IN PROGRESS
+
+Do not use this manual, until this comment is removed, as it's work in progress and incomplete.  
+Feel free to come back later and give it a try. :-)
+
 # 1. Register a free account for the Hetzner services (Robot, Cloud, etc.)
 
 __Important:__  
