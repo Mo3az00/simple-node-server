@@ -209,3 +209,74 @@ Create the index file:
 
 Paste the content of [this file](./index.html) into the editor.  
 Save and close the file using [Ctrl] + [x] => [y] => [Enter].
+
+Change to the nginx configuration folder:  
+```cd /etc/nginx/sites-available/```
+
+Edit the default config:  
+```sudo nano default```
+
+Remove all contents ([Strg] + [k] again and again until it's empty) and paste this content:  
+
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        server_name node1.prod.your-domain.com;
+
+        location / {
+                root /var/www/default;
+                index index.html;
+        }
+
+        location ~ /.well-known {
+                allow all;
+        }
+}
+```
+
+## Configure boilerplate apllication
+
+Add a new config file for our application:
+```sudo nano expressjs-bootstrap-boilerplate.your-domain.com```
+
+Paste __and edit__ the following content:  
+```
+# reverse proxy
+server {
+        listen 80;
+        listen [::]:80;
+        
+        # Server Name
+        server_name expressjs-bootstrap-boilerplate.your-domain.com;
+
+        # Logs
+        access_log /var/log/nginx/expressjs-bootstrap-boilerplate.your-domain.com-access.log;
+        error_log /var/log/nginx/expressjs-bootstrap-boilerplate.your-domain.com.de-error.log;
+
+        location / {
+                proxy_pass http://localhost:7777;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }
+}
+```
+
+Change to the enabled sites folder:  
+```cd /etc/nginx/sites-enabled/```
+
+Create a symlink for the new configuration:  
+```ln -s ../sites-available/expressjs-bootstrap-boilerplate.your-domain.com```
+
+Check if the nginx config is still okay:  
+```sudo service nginx configtest```
+
+If there's an error: Ask your instructor!  
+If it says "[ok]" everything is nice.
+
+Restart the nginx server:  
+```sudo service nginx restart```
