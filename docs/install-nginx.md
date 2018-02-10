@@ -71,17 +71,5 @@ cp ~/simple-node-server/starter-files/nginx/default.conf /etc/nginx/conf.d/defau
 ```
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./install-mongodb.md">
-            Install MongoDB
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./install-demo-project.md">
-            Install demo project
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Install demo project](./install-demo-project.md)

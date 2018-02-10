@@ -186,17 +186,5 @@ net.ipv4.conf.all.log_martians = 1
 ```
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./adding-a-new-user.md">
-            Adding a new user
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./install-nodejs.md">
-            Install Node.js
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Install Node.js](./install-nodejs.md)

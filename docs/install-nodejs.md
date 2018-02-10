@@ -27,17 +27,5 @@ v8.9.4
 ```
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./add-security.md">
-            Adding Security
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./install-mongodb.md">
-            Install MongoDB
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Install MongoDB](./install-mongodb.md)

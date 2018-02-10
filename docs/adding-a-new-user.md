@@ -74,27 +74,14 @@ Login with the new user:
 ssh {username}@{ip address}
 ```
 
-## Checkout starter files
+## Clone the starter files
 
-Clone the repository into your home folder, to get files that you can edit and / or copy to their destination. This will speed up the configuration in the following steps.
+Clone this repository into your home folder, to get files that you can edit and / or copy to their destination. This will speed up the configuration in the following steps.
 
 ```
 cd ~
 git clone https://github.com/noreading/simple-node-server.git
 ```
 
-
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./creating-a-small-server.md">
-            Creating a small server
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./adding-security.md">
-            Adding security
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Adding security](./adding-security.md)

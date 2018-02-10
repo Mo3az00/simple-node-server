@@ -9,13 +9,8 @@ Software that will be installed:
 - Node.js
 - MongoDB
 - Nginx
-- Certbot
+- Let's Encrypt
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: right;">
-        <a href="./registering-a-free-hetzner-account.md">
-            Registering a free Hetzner account
-        </a>
-        &raquo;
-    </div>
-</div>
+
+---
+__Start:__ [Registering a free Hetzner account](./registering-a-free-hetzner-account.md)

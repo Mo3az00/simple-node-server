@@ -16,17 +16,5 @@ You need to wait for an activation email and click on the link inside. It can al
 If you can't create a project or server for longer, please contact the [support](https://www.hetzner.com/support-center?country=us).
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./what-to-get-from-this-tutorial.md">
-            What to get from this tutorial
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./adding-a-project-and-ssh-key.md">
-            Adding a project and SSH key
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Adding a project and SSH key](./adding-a-project-and-ssh-key.md)

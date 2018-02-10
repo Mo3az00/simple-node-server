@@ -30,18 +30,5 @@ Add your public SSH key of the user and machine you use to connect to your new s
 
 <img src="./images/hetzner-cloud-access-add-key.jpg" alt="SSH Key Dialog" width="200">
 
-
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./registering-a-free-hetzner-account.md">
-            Registering a free Hetzner account
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./creating-a-small-server.md">
-            Creating a small server
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Creating a small server](./creating-a-small-server.md)

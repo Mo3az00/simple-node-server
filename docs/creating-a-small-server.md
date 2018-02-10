@@ -75,17 +75,5 @@ node1.prod.{your domain}   {server ip address}
 boilerplate{your domain}   {server ip address}
 ```
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./adding-a-project-and-ssh-key.md">
-            Adding a project and SSH key
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./adding-a-new-user.md">
-            Adding a new user
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Adding a new user](./adding-a-new-user.md)

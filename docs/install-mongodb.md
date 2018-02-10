@@ -157,17 +157,5 @@ bye
 You can get more information about user authorization in the [Official Documentation](https://docs.mongodb.com/manual/tutorial/enable-authentication/#user-administrator) if you'd like to know more.
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./install-nodejs.md">
-            Install Node.js
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./install-nginx.md">
-            Install nginx
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Install nginx](./install-nginx.md)

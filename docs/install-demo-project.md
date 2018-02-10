@@ -110,17 +110,5 @@ http://boilerplate.{your domain}
 Now, that we've seen that everything works, we'll stop the application by pressing [Strg] + [c] in the terminal to cancel the Node.js process.
 
 
-<div style="border-top: 2px solid #a0a0a0; margin-top: 2.5rem; padding-top: 1rem;">
-    <div style="float: left">
-        &laquo;
-        <a href="./install-nginx.md">
-            Install nginx
-        </a>
-    </div>
-    <div style="float: right;">
-        <a href="./install-lets-encrypt.md">
-            Install Let's Encrypt
-        </a>
-        &raquo;
-    </div>
-</div>
+---
+__Next:__ [Install Let's Encrypt](./install-lets-encrypt.md)
