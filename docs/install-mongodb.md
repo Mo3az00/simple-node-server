@@ -129,7 +129,7 @@ sudo systemctl restart mongod
 
 Open the Mongo shell:  
 ```
-mongo
+sudo mongo
 ```
 
 Select the admin database:  
