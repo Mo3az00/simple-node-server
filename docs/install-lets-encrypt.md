@@ -53,11 +53,16 @@ Add the following line after "server_name":
 include /etc/nginx/snippets/letsencrypt.conf;
 ```
 
+Restart the nginx server:  
+```
+sudo systemctl restart nginx
+```
+
 ## Request a certificate
 
 Now, that we've prepared the nginx configuration, we're able to request a new certificate for our demo subdomain:  
 ```
-certbot certonly --webroot --agree-tos --no-eff-email --email {your email} -w /var/www/letsencrypt -d boilerplate.{your domain}
+sudo certbot certonly --webroot --agree-tos --no-eff-email --email {your email} -w /var/www/letsencrypt -d boilerplate.{your domain}
 ```
 
 The result should look like this:  
@@ -170,7 +175,7 @@ If this works without any issues let's create a new cronjob that renews the cert
 
 Copy the script from the starter files and make it executable:  
 ```
-cp ~/simple-node-server/starter-files/letsencrypt.sh /root/letsencrypt.sh
+sudo cp ~/simple-node-server/starter-files/letsencrypt.sh /root/letsencrypt.sh
 sudo chmod +x /root/letsencrypt.sh
 ```
 
