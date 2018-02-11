@@ -1,11 +1,4 @@
-﻿# WORK IN PROGRESS
-
-Do not use this manual, until this comment is removed, as it's work in progress and incomplete.  
-Feel free to come back later and give it a try. :-)
-
-This tutorial is based on [Hetzner Cloud Servers](https://www.hetzner.com/cloud?country=us), but you can use any root or virtual server with an [Ubuntu 16.04](http://releases.ubuntu.com/16.04/) image.
-
-# Placeholders
+﻿# Placeholders
 
 Terminal commands and prepared files will have placeholders in them __that have to be replaced__ with values matching your setup. This could for example look like this:  
 <pre>
