@@ -13,9 +13,9 @@ I suggest to paste the address into an empty text file, so that you don't have t
 The commands of this tutorial can be run in any terminal on Ubuntu or Mac computers. For Windows you need a linux shell like Git Bash (comes together with Git) or [Cygwin](http://www.cygwin.com/).
 
 Use SSH to login:  
-```
-ssh root@{ip address}
-```
+<pre>
+ssh root@<b>{ip address}</b>
+</pre>
 
 ## Add a new user
 
@@ -25,63 +25,63 @@ If you're managing the server alone, the easiest thing to remembe is your first 
 
 ### Create the user and change the password
 
-```
-useradd -m -s /bin/bash {username} 
-passwd {username}
-```
+<pre>
+useradd -m -s /bin/bash <b>{username}</b>
+passwd <b>{username}</b>
+</pre>
 
 ### Add sudo access
 
 Open the [sudo](https://www.howtoforge.com/tutorial/sudo-beginners-guide/) configuration in the [nano](https://www.nano-editor.org/) editor:  
 
-```
+<pre>
 nano /etc/sudoers
-```
+</pre>
 
 Enable sudo access for the new user by adding this line:  
-```
+<pre>
 # Allow user to execute any command without password prompt
-{username} ALL=(ALL) NOPASSWD:ALL
-```
+<b>{username}</b> ALL=(ALL) NOPASSWD:ALL
+</pre>
 
 ### Add your SSH key
 
 Change your terminal session to that user:  
-```
-su - {username}
-```
+<pre>
+su - <b>{username}</b>
+</pre>
 
 Create the SSH directory:  
-```
+<pre>
 mkdir .ssh
 chmod 700 .ssh
-```
+</pre>
 
 Create an __authorized_keys__ file:  
-```
+</pre>
 touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
-```
+</pre>
 
 Add your SSH key to the file:  
-```
+<pre>
 nano .ssh/authorized_keys
-```
+</pre>
 
 Press [Ctrl] + [d] twice, to logout of the server.  
 Login with the new user:  
-```
-ssh {username}@{ip address}
-```
+<pre>
+ssh <b>{username}</b>@<b>{ip address}</b>
+</pre>
 
 ## Clone the starter files
 
 Clone this repository into your home folder, to get files that you can edit and / or copy to their destination. This will speed up the configuration in the following steps.
 
-```
+<pre>
 cd ~
 git clone https://github.com/noreading/simple-node-server.git
-```
+</pre>
 
 ---
 __Next:__ [Adding security](./adding-security.md)

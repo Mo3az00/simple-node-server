@@ -47,13 +47,13 @@ You should use a name that tells what the server is used for and if it is runnin
 
 __Mixed servers:__  
 If a server is used for multiple things, I would not suggest to add all features to the name. You could use the name of the application instead.  
-```
+<pre>
 portfolio.prod.your-domain.com
-```
+</pre>
 
 I group my servers like this:
 
-```
+<pre>
 # Node.js
 node1.prod.your-domain.com
 node1.dev.your-domain.com
@@ -63,17 +63,17 @@ php1.prod.your-domain.com
 
 # Nginx
 web1.prod.your-domain.com
-```
+</pre>
 
 ## Set DNS records
 
 You need to set the DNS records for your domain, to match the used hostname and the demo project of this tutorial. If you're not managing the DNS settings of your domain by yourself ask your administrator.
 
 Add 2 A records to your DNS seetings:
-```
-node1.prod.{your domain}   {server ip address}
-boilerplate{your domain}   {server ip address}
-```
+<pre>
+node1.prod.<b>{your domain}</b>   <b>{server ip address}</b>
+boilerplate<b>{your domain}</b>   <b>{server ip address}</b>
+</pre>
 
 ---
 __Next:__ [Adding a new user](./adding-a-new-user.md)
