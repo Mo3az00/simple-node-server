@@ -135,7 +135,10 @@ server {
         server_name boilerplate.{your domain};
 
         include /etc/nginx/snippets/letsencrypt.conf;
-        return 301 https://$host$request_uri;
+
+        location / {
+          return 301 https://$host$request_uri;
+        }
 }
 ```
 
