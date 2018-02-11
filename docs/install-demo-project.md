@@ -15,6 +15,8 @@ Create the new user:
 ```
 use admin
 db.auth('databaseManager', '{your db admin password}')
+
+use boilerplate
 db.createUser(
   {
     user: "boilerplate",
