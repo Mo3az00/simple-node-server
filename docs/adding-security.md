@@ -9,7 +9,7 @@ sudo nano /etc/ssh/sshd_config
 
 Search for the string "PermitRootLogin" and change the value from "yes" to "no":  
 ```
-PermitRootLogin yes
+PermitRootLogin no
 ```
 
 Search for the string "PasswordAuthentication", remove the hash and change the value from "yes" to "no":  
