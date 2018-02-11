@@ -4,6 +4,8 @@ This tutorial will guide you to setup a secure server to run multiple [Node.js](
 
 Some parts of the tutorial, like setting up a local MongoDB server or Let's encrypt for TLS encryption can be skipped, if you don't need them.
 
+We'll also learn how to setup Node.js applications as system services that restart themselves on a crash and that run automatically on boot.
+
 Software that will be installed:
 
 - Node.js

@@ -100,7 +100,7 @@ db.createUser(
   {
     user: "databaseManager",
     pwd: "{your secure password}",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+    roles: [ { role: "root", db: "admin" } ]
   }
 );
 ```

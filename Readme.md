@@ -70,4 +70,6 @@ We will use the [nano](https://www.nano-editor.org/) editor in this tutorial, bu
 1. [Install MongoDB](./docs/install-mongodb.md)
 1. [Install nginx](./docs/install-nginx.md)
 1. [Install demo project](./docs/install-demo-project.md)
+1. [Install a system service](./docs/install-system-service.md)
 1. [Install Let's Encrypt](./docs/install-lets-encrypt.md)
+1. [Cleanup](./docs/cleanup.md)

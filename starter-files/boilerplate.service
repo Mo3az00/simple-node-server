@@ -1,0 +1,15 @@
+[Unit]
+Description=Express + Mongo Boilerplate
+After=network.target
+
+[Service]
+User=root
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/node/boilerplate.{your domain}
+ExecStart=/usr/bin/node start.js
+Restart=always
+RestartSec=500ms
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

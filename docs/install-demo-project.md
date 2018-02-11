@@ -59,19 +59,19 @@ DATABASE_NAME=boilerplate
 
 ## Create the host configuration
 
-Open the starter configuration:  
+Copy the template from the starter files:  
 ```
-nano ~/simple-node-server/starter-files/nginx/boilerplate.conf
+sudo cp ~/simple-node-server/starter-files/nginx/boilerplate.conf /etc/nginx/conf.d/boilerplate.{your domain}.conf
+```
+
+Open the new configuration:  
+```
+sudo nano /etc/nginx/conf.d/boilerplate.{your domain}.conf
 ```
 
 Update the following line and replace the placeholder:  
 ```
         server_name boilerplate.{your domain};
-```
-
-Copy the config file to the nginx folder:  
-```
-cp ~/simple-node-server/starter-files/nginx/boilerplate.conf /etc/nginx/conf.d/boilerplate.{your domain}.conf
 ```
 
 Check if the configuration is working:  
@@ -109,6 +109,8 @@ http://boilerplate.{your domain}
 
 Now, that we've seen that everything works, we'll stop the application by pressing [Strg] + [c] in the terminal to cancel the Node.js process.
 
+We'll learn how to setup our application as a system service in the next step.
+
 
 ---
-__Next:__ [Install Let's Encrypt](./install-lets-encrypt.md)
+__Next:__ [Install a system service](./install-system-service.md)

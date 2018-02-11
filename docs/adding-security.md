@@ -19,7 +19,7 @@ PasswordAuthentication
 
 Restart the SSH service:  
 ```
-sudo service ssh restart
+sudo systemctl restart ssh
 ```
 
 ## Update packages
@@ -27,6 +27,14 @@ sudo service ssh restart
 Update the default packages:  
 ```
 sudo apt-get update && sudo apt-get dist-upgrade
+```
+
+## Install softare properties package
+
+This is needed for multiple software packages in this tutorial, when we add the official software repositories and use them instead of the default Ubuntu package lists.
+
+```
+sudo apt install software-properties-common
 ```
 
 ## Install fail2ban
@@ -93,7 +101,7 @@ maxretry = 5
 
 Restart the fail2ban service:  
 ```
-sudo service fail2ban restart
+sudo systemctl restart fail2ban
 ```
 
 ## Install and configure a firewall
