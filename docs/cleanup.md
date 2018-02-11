@@ -34,7 +34,7 @@ sudo rm /etc/systemd/system/node-boilerplate.{your-domain}
 
 Connect to the Mongo shell:  
 ```
-mongo
+sudo mongo
 ```
 
 Authenticate as root user:  
