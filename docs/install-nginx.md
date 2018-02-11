@@ -42,7 +42,8 @@ Add the following lines inside the "http" block:
 We will store our web projects in the common folder /var/www/, that we might have to create first (depending on the used system image).
 
 ```
-mkdir /var/www
+sudo mkdir /var/www
+sudo chown {username}:{username} /var/www
 ```
 
 ## Create the default directory and files
@@ -51,24 +52,24 @@ Copy the ready index.html from the starter files to a new directory, that will b
 
 ```
 mkdir /var/www/default
-cp ~/simple-node-server/starter-file/index.html /var/www/default/
+cp ~/simple-node-server/starter-files/index.html /var/www/default/
 ```
 
 ## Overwrite the default host configuration
 
-Open the default.conf starter file:  
+Overwrite the nginx package default config with the starter file:  
 ```
-sudo nano ~/simple-node-server/starter-files/nginx/default.conf
+sudo cp ~/simple-node-server/starter-files/nginx/default.conf /etc/nginx/conf.d/default.conf
+```
+
+Open the new config:  
+```
+sudo nano /etc/nginx/conf.d/default.conf
 ```
 
 Update the following lines and replace placeholders:  
 ```
     server_name {your hostname};
-```
-
-Overwrite the nginx package default config with our new one:  
-```
-cp ~/simple-node-server/starter-files/nginx/default.conf /etc/nginx/conf.d/default.conf
 ```
 
 
