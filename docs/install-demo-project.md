@@ -26,7 +26,13 @@ db.createUser(
 
 ## Clone the repository and install dependencies
 
-Let's create a web root folder and clone the repository. I suggest to use a folder /var/www/node/ to store node applications.
+If there's no git installed in your image, let's do this now:  
+```
+sudo apt-get install git -y
+```
+
+We create a web root folder and clone the repository of a demo boilerplate.  
+I suggest to use a folder /var/www/node/ to store all your node applications.
 
 ```
 mkdir -p /var/www/node/boilerplate.{your-domain}
