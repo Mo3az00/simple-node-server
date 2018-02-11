@@ -34,14 +34,14 @@ sudo apt-get update && sudo apt-get dist-upgrade
 This is needed for multiple software packages in this tutorial, when we add the official software repositories and use them instead of the default Ubuntu package lists.
 
 ```
-sudo apt install software-properties-common
+sudo apt install software-properties-common -y
 ```
 
 ## Install fail2ban
 
 Install fail2ban and sendmail:  
 ```
-sudo apt-get install fail2ban sendmail
+sudo apt-get install fail2ban sendmail -y
 ```
 
 Create local fail2ban.conf file:  
@@ -108,7 +108,7 @@ sudo systemctl restart fail2ban
 
 Install the uncomplicated firewall ([ufw](https://wiki.ubuntu.com/UncomplicatedFirewall)):
 ```
-sudo apt-get install ufw
+sudo apt-get install ufw -y
 ```
 
 Run the following commands to disallow all traffic that is not coming to a webserver or for the SSH connection:
@@ -152,7 +152,7 @@ sudo ufw --help
 ## Install logwatch
 
 ```
-sudo apt-get install logwatch
+sudo apt-get install logwatch -y
 ```
 
 Open the configuration:  
