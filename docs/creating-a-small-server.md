@@ -69,7 +69,7 @@ web1.prod.your-domain.com
 
 You need to set the DNS records for your domain, to match the used hostname and the demo project of this tutorial. If you're not managing the DNS settings of your domain by yourself ask your administrator.
 
-Add 2 A records to yout DNS seetings:
+Add 2 A records to your DNS seetings:
 ```
 node1.prod.{your domain}   {server ip address}
 boilerplate{your domain}   {server ip address}
