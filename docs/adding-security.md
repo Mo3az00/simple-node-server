@@ -14,7 +14,7 @@ PermitRootLogin yes
 
 Search for the string "PasswordAuthentication", remove the hash and change the value from "yes" to "no":  
 ```
-PasswordAuthentication
+PasswordAuthentication no
 ```
 
 Restart the SSH service:  
