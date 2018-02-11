@@ -8,7 +8,7 @@ We want to creat a user per project database, to limit the access.
 
 Connect to the Mongo shell:  
 ```
-mongo
+sudo mongo
 ```
 
 Create the new user:  
