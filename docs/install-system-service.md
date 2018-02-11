@@ -10,7 +10,7 @@ Let's start by creating a unit file for our application.
 
 Copy the unit file from the starter files to systemd services:  
 ```
-cp ~/simple-node-server/starter-files/boilerplate.service /etc/systemd/system/node-boilerplate.{your domain}.service
+sudo cp ~/simple-node-server/starter-files/boilerplate.service /etc/systemd/system/node-boilerplate.{your domain}.service
 ```
 
 We have 5 settings that are interesting to change for most applications:  
@@ -35,12 +35,12 @@ WorkingDirectory=/var/www/node/boilerplate.{your domain}
 
 Let's try to run our new service:  
 ```
-sudo systemctl node-boilerplate.{your domain} start
+sudo systemctl start node-boilerplate.{your domain}
 ```
 
 Verify that it's running:  
 ```
-sudo systemctl node-boilerplate.{your domain} status
+sudo systemctl status node-boilerplate.{your domain}
 ```
 
 The output should look like this:  
