@@ -26,33 +26,10 @@ Let's create the snippet directory:
 sudo mkdir /etc/nginx/snippets
 ```
 
-To create the files simply type ```sudo nano {filename}``` and paste the contents below.
-
-_/etc/nginx/snippets/letsencrypt.conf_  
+Copy the snippets to nginx:  
 ```
-location ^~ /.well-known/acme-challenge/ {
-	default_type "text/plain";
-	root /var/www/letsencrypt;
-}
-```
-
-_/etc/nginx/snippets/ssl.conf_  
-```
-ssl_session_timeout 1d;
-ssl_session_cache shared:SSL:50m;
-ssl_session_tickets off;
-
-ssl_protocols TLSv1.2;
-ssl_ciphers EECDH+AESGCM:EECDH+AES;
-ssl_ecdh_curve secp384r1;
-ssl_prefer_server_ciphers on;
-
-ssl_stapling on;
-ssl_stapling_verify on;
-
-add_header Strict-Transport-Security "max-age=15768000; includeSubdomains; preload";
-add_header X-Frame-Options DENY;
-add_header X-Content-Type-Options nosniff;
+sudo cp ~/simple-node-server/starter-files/nginx/letsencrypt.conf /etc/nginx/snippets/letsencrypt.conf
+sudo cp ~/simple-node-server/starter-files/nginx/ssl.conf /etc/nginx/snippets/ssl.conf
 ```
 
 ## Create the folder for challenges
