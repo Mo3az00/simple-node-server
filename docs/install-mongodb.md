@@ -35,7 +35,7 @@ sudo apt-get update
 Install the ```mongodb-org``` meta package, which includes the daemon, configuration and init scripts, shell and management tools on the server.
 
 ```
-sudo apt-get install mongodb-org
+sudo apt-get install mongodb-org -y
 ```
 
 Create the data director:  
