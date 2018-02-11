@@ -14,7 +14,7 @@ sudo apt-get update
 
 Install the package:  
 ```
-sudo apt install certbot
+sudo apt-get install certbot -y
 ```
 
 ## Create snippets
