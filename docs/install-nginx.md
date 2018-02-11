@@ -12,6 +12,7 @@ sudo cp ~/simple-node-server/starter-files/nginx/nginx-org.list /etc/apt/sources
 ## Install the package
 
 ```
+sudo apt-get update
 sudo apt-get install nginx -y
 ```
 
