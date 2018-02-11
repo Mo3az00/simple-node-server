@@ -9,7 +9,7 @@ cd ~
 curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 chmod 755 nodesource_setup.sh
 sudo ./nodesource_setup.sh
-sudo apt-get install nodejs
+sudo apt-get install nodejs -y
 rm nodesource_setup.sh
 ```
 
