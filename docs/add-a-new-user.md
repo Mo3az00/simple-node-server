@@ -1,12 +1,10 @@
-# Adding a new user
+# Add a new user
 
 ## Get the IP address
 
-Copy the IP address of your new server from the server management page, where you created the machine. If you click the IP adress in the overview, it will automatically get copied to your clipboard.
+Copy the IP address of your new droplet from the [droplet management](https://cloud.digitalocean.com/droplets) page. If you click on the IP adress it will automatically get copied to your clipboard.
 
-<img src="./images/hetzner-server-ip.jpg" alt="SSH Key Management page" width="500">
-
-I suggest to paste the address into an empty text file, so that you don't have to go back to the management page again and again.
+<img src="./images/do-get-ip.jpg" alt="SSH Key Management page" width="500">
 
 ## Login to your server
 
@@ -84,4 +82,4 @@ git clone https://github.com/noreading/simple-node-server.git
 </pre>
 
 ---
-__Next:__ [Adding security](./adding-security.md)
+__Next:__ [Adding security](./add-security.md)

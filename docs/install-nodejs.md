@@ -17,7 +17,7 @@ rm nodesource_setup.sh
 
 Run the following command:  
 <pre>
-node -v && npm -v
+node -v &amp;&amp; npm -v
 </pre>
 
 The result should look similar to this:  

@@ -1,27 +1,10 @@
-# Cleanup
+# Remove the demo project
 
-Now that you've finished this tutorial, here's a small cleanup guide, if you want to get rid of things that you might not need anymore.
+Now that you've finished the basic setup, here's a small cleanup guide, if you want to get rid of things that you might not need anymore.
 
-Feel free to send me feedback for the tutorial and have fun with your server!  
-[support@dominik-hanke.de](mailto:os@dominik-hanke.de)
+After removing the demo project, we'll see how to setup your own application that's hosted on [Github](https://github.com/).
 
-Bye, bye!
-
-Dominik
-
-## Remove the starter files
-
-You can keep the starter files for reference, when addint new applications and configurations or delete them.  
-If you want to delete the starter files and the repository, run the following command:  
-<pre>
-rm -rf ~/simple-node-server/
-</pre>
-
-## Remove the demo project
-
-The following steps descripe how to to remove the demo project completely after successfully testing all important features of your new server.
-
-### Stop and remove the service
+## Stop and remove the service
 
 Remove the process from the init system:  
 <pre>
@@ -30,7 +13,7 @@ sudo systemctl disable node-boilerplate.<b>{your domain}</b>
 sudo rm /etc/systemd/system/node-boilerplate.<b>{your-domain}</b>
 </pre>
 
-### Remove the database and user
+## Remove the database and user
 
 Connect to the Mongo shell:  
 <pre>
@@ -57,7 +40,7 @@ db.dropUser('boilerplate')
 exit
 </pre>
 
-### Remove nginx configuration
+## Remove nginx configuration
 
 Remove the configuration file:  
 <pre>
@@ -69,9 +52,22 @@ Restart the webserver:
 sudo service nginx restart
 </pre>
 
-### Remove files
+## Remove project files
 
 Remove the web root:  
 <pre>
 sudo rm -rf /var/www/node/boilerplate.<b>{your domain}</b>
 </pre>
+
+## Remove starter files
+
+You can keep the starter files for reference, to copy &amp; paste when adding new applications and configurations, or just delete them.  
+
+If you want to delete the starter files, run the following command:  
+<pre>
+rm -rf ~/simple-node-server/
+</pre>
+
+---
+
+__Next:__ [Add your own application](./add-your-own-application.md)

@@ -71,4 +71,4 @@ Update the following lines and replace placeholders:
 </pre>
 
 ---
-__Next:__ [Install demo project](./install-demo-project.md)
+__Next:__ [Install demo project](./install-a-demo-project.md)

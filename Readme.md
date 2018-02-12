@@ -1,4 +1,21 @@
-﻿# Placeholders
+﻿# What you get with this tutorial
+
+This tutorial will guide you to setup a secure server for running multiple [Node.js](https://nodejs.org/en/) applications with TLS encryption and a local [MongoDB](https://www.mongodb.com/) database. By using the [nginx](https://nginx.org/) webserver in front of Node.js we are able to run as many applications (with different domains) as we like.
+
+Some parts of the tutorial, like setting up a local MongoDB server or Let's encrypt for TLS encryption can be skipped, if you don't need them.
+
+We'll also learn how to setup Node.js applications as system services that restart themselves on a crash and that run automatically on boot.
+
+Software that will be installed:
+
+- Node.js
+- MongoDB
+- Nginx
+- Let's Encrypt
+- Security packages:  
+  fail2ban, logwatch, apticron
+
+# Placeholders
 
 Terminal commands and prepared files will have placeholders in them __that have to be replaced__ with values matching your setup. This could for example look like this:  
 <pre>
@@ -51,18 +68,18 @@ We will use the [nano](https://www.nano-editor.org/) editor in this tutorial, bu
 |[Ctrl] + [o] => [y] => [Enter]|Save file|Saves the changes and leaves editor open.|
 |[Ctrl] + [x] => [y] => [Enter]|Close editor and save|Closes the editor and saves changes.|
 
-# Contents
-
-1. [What will I get from this tutorial?](./docs/what-to-get-from-this-tutorial.md)
-1. [Registering a free Hetzner account](./docs/registering-a-free-hetzner-account.md)
-1. [Adding a project and SSH key](./docs/adding-a-project-and-ssh-key.md)
-1. [Creating a small server](./docs/creating-a-small-server.md)
-1. [Adding a new user](./docs/adding-a-new-user.md)
-1. [Adding security](./docs/adding-security.md)
+# Table of Contents
+1. [Register a free DigitalOcean account](./docs/register-a-free-digitalocean-account.md)
+1. [Create your first droplet](./docs/create-your-first-droplet.md)
+1. [Add a new user](./docs/add-a-new-user.md)
+1. [Add security](./docs/add-security.md)
 1. [Install Node.js](./docs/install-nodejs.md)
 1. [Install MongoDB](./docs/install-mongodb.md)
 1. [Install nginx](./docs/install-nginx.md)
-1. [Install demo project](./docs/install-demo-project.md)
+1. [Install a demo project](./docs/install-a-demo-project.md)
 1. [Install a system service](./docs/install-system-service.md)
 1. [Install Let's Encrypt](./docs/install-lets-encrypt.md)
-1. [Cleanup](./docs/cleanup.md)
+1. [Remove the demo project](./docs/reove-the-demo-project.md)
+1. [Add your own application](./docs/add-your-own-application.md)
+1. [Recurrent management tasks](./docs/recurring-management-tasks.md)
+1. [The End](./docs/the-end.md)

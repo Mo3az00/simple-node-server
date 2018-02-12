@@ -193,4 +193,4 @@ Add the following line, to run the renewal process every day at 03:30:
 </pre>
 
 ---
-__Next:__ [Cleanup](./cleanup.md)
+__Next:__ [Remove the demo project](./remove-the-demo-project.md)
