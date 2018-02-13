@@ -1,13 +1,12 @@
 # Register a free DigitalOcean account
 
-__Note:__  
-If you want to use another provider for your server you can skip this and the next step.
+__Note:__ If you want to use another provider for your server you can skip this and the next step.
 
 ## Why DigitalOcean?
 
-[DigitalOcean](https://www.digitalocean.com/) is known for fast and reliable servers at an affordable price, with lots of great featres that can be added later, if needed.
+[DigitalOcean](https://www.digitalocean.com/) is known for fast and reliable servers at an affordable price, with lots of great features that can be added later, if they are needed.
 
-The smalles droplet can handle multiple Node.js applications or start multiple process of the same application and costs (as of 12th Feb. 2018) $5 per month.
+The smallest droplet can handle multiple Node.js applications or start multiple process of the same application and costs only $5 per month (2018-02-12).
 
 ## Sign up
 

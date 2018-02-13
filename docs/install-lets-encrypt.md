@@ -108,13 +108,13 @@ sudo nano /etc/nginx/conf.d/boilerplate.<b>{your domain}</b>.conf
 
 Change the listen directives:  
 <pre>
-	listen 443 ssl http2;
-	listen [::]:443 ssl http2;
+listen 443 ssl http2;
+listen [::]:443 ssl http2;
 </pre>
 
 Remove the following snippet:  
 <pre>
-	include /etc/nginx/snippets/letsencrypt.conf;
+include /etc/nginx/snippets/letsencrypt.conf;
 </pre>
 
 Add the SSL configuration right after "server_name":  
@@ -155,14 +155,14 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 If it doesn't, please check if you missed a semicolon or broke something during copy &amp; paste.
 
-When everthing is fine, restart the nginx server:  
+When everything is fine, restart the nginx server:  
 <pre>
 sudo systemctl restart nginx
 </pre>
 
 You should be able to access the app using https now and all http requests should get redirected to https.
 
-Open the http URL in your browser to test the behaviour and if the certificate is accepted:  
+Open the http URL in your browser to test the behavior and if the certificate is accepted:  
 <pre>
 http://boilerplate.<b>{your domain}</b>
 </pre>

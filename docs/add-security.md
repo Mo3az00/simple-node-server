@@ -26,10 +26,10 @@ sudo systemctl restart ssh
 
 Update the default packages:  
 <pre>
-sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
+sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade -y
 </pre>
 
-## Install softare properties package
+## Install software properties package
 
 This is needed for multiple software packages in this tutorial, when we add the official software repositories and use them instead of the default Ubuntu package lists.
 
@@ -176,7 +176,7 @@ Open the network configuration file:
 sudo nano /etc/sysctl.conf
 </pre>
 
-Uncomment the following lines:  
+Remove the hash of in front of the following lines:  
 <pre>
 net.ipv4.conf.default.rp_filter=1
 net.ipv4.conf.all.rp_filter=1

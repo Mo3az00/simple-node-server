@@ -1,0 +1,15 @@
+[Unit]
+Description={very short application description}
+After=network.target
+
+[Service]
+User=root
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/node/{application domain}
+ExecStart=/usr/bin/node {application start script}
+Restart=always
+RestartSec=500ms
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

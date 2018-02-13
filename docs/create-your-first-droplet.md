@@ -1,5 +1,7 @@
 # Create your first droplet
 
+We will setup your first cloud-based server in this step and show you which settings should be chosen as a beginner. Please keep in mind that you can always upgrade your server, if you really need it, so don't book a big one just "to be sure" now.
+
 ## Click the button
 
 Go to the [Droplet management](https://cloud.digitalocean.com/droplets) page and click the big blue button.
@@ -8,7 +10,7 @@ Go to the [Droplet management](https://cloud.digitalocean.com/droplets) page and
 
 ## Choose an image
 
-Choose "Ubuntu 16.04 x64" as this is a common image for servers and the tutorial is based on this version. Some commands or packages may differ in other versions.
+Choose "Ubuntu 16.04 x64" as this is a common image to run production servers and the tutorial is based on this version. Some commands or packages may differ in other versions.
 
 <img src="./images/do-droplet-image.jpg" alt="Photo: Image selection" width="450">
 
@@ -26,15 +28,17 @@ DigitalOcean offers different locations for their droplets. You should choose a 
 
 ## Select additional options
 
-I suggest to activate the two (free) additional options "IPv6" and "Monitoring" to get the most out of your machine. We have to install an additional software package for the advanced monitoring later, so don't skip that step if you select the option now.
+I suggest to activate the two (free) additional options "IPv6" and "Monitoring" to get the most out of your machine. We have to install an additional software package for the advanced monitoring later, so please don't skip that step if you select this option now.
+
+<img src="./images/do-additional-options.jpg" alt="Photo: Choosing a datacenter location" width="400">
 
 ## Add your SSH key
 
-To be able to securely login into the new servers you create you should add your SSH key. If you don't add your SSH key the droplet will be accessible with a generated password and bots or hackers could try to brute-force your root account.
+To be able to securely login into the new server that you create you should add your SSH key. If you don't add your SSH key the droplet will be accessible with a generated password and bots or hackers could try to brute-force your root account.
 
-<img src="./images/do-ssh-key-1.jpg" alt="Photo: Click the button to open the SSH key dialog modal" width="310">
+<img src="./images/do-ssh-key-1.jpg" alt="Photo: Click the button to open the SSH key dialog modal" width="356">
 
-Add your public SSH key to be able to securely connect to your new server after creation.
+Add your public SSH key.
 
 <img src="./images/do-ssh-key-2.jpg" alt="Photo: The SSH key dialog modal" width="310">
 
@@ -42,38 +46,36 @@ Add your public SSH key to be able to securely connect to your new server after 
 
 You should use a name that is self-explanatory and reminds you what the server is used for and if it is running for production, development, staging, etc.
 
-If a server is used for multiple things, I would not suggest to add all of its features to the name. You could use the name of the application instead.  
-<pre>
-portfolio.prod.my-domain.com
-</pre>
-
-I group my servers like this:
+I like to group my servers like this:
 
 <pre>
 # Node.js
 node1.prod.my-domain.com
 node1.dev.my-domain.com
 
-# PHP
-php1.prod.my-domain.com
-
 # Nginx
 web1.prod.my-domain.com
 </pre>
 
-<img src="./images/do-hostname.jpg" alt="Photo: Choosing a good hostname" width="440">
+If a server is used for multiple things, I would not suggest to add all of its features to the name. You could use the name of the application instead.  
+<pre>
+portfolio.prod.my-domain.com
+</pre>
 
-## Stat the process
+<img src="./images/do-hostname.jpg" alt="Photo: Choosing a good hostname" width="456">
 
-Click the big, green "Create" button to start the process of creating the droplet. The droplet building process will be shown.
+## Start the process
 
-<img src="./images/do-droplet-progress.jpg" alt="Photo: Progress bar for the running creation" width="440">
+Click the big, green "Create" button to start the process of creating the droplet.  
+The droplet building process will be shown.
+
+<img src="./images/do-droplet-progress.jpg" alt="Photo: Progress bar for the running creation" width="514">
 
 ## Set DNS records
 
-You need to set the DNS records for your domain, to match the used hostname and the demo project of this tutorial. If you're not managing the DNS settings of your domain on DigitalOcean or in a domani management system yourself, ask your administrator.
+You need to set the DNS records for your domain, to match the used hostname and the demo project of this tutorial. If you're not managing the DNS settings of your domain on DigitalOcean or in a domain management system yourself, ask your administrator.
 
-Add needed __A__ and __AAA__ records to your DNS seetings:
+Add needed __A__ and __AAA__ records to your DNS settings:
 <pre>
 node1.prod.<b>{your domain}</b>   <b>{server ip address}</b>
 boilerplate<b>{your domain}</b>   <b>{server ip address}</b>

@@ -46,7 +46,7 @@ sudo chown <b>{username}</b>:<b>{username}</b> /var/www
 
 ## Create the default directory and files
 
-Copy the ready index.html from the starter files to a new directory, that will be served by the webserver for any domain you don't want to be accesible.
+Copy the ready index.html from the starter files to a new directory, that will be served by the webserver for any domain you don't want to be accessible.
 
 <pre>
 mkdir /var/www/default

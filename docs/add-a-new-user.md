@@ -2,7 +2,7 @@
 
 ## Get the IP address
 
-Copy the IP address of your new droplet from the [droplet management](https://cloud.digitalocean.com/droplets) page. If you click on the IP adress it will automatically get copied to your clipboard.
+Copy the IP address of your new droplet from the [droplet management](https://cloud.digitalocean.com/droplets) page. If you click on the IP address it will automatically get copied to your clipboard.
 
 <img src="./images/do-get-ip.jpg" alt="SSH Key Management page" width="500">
 
@@ -19,7 +19,7 @@ ssh root@<b>{ip address}</b>
 
 It's common to use your real name as username, so that it's easy to remember. If you want to manage a server with multiple users it can be a benefit to use concatenated names like "dhanke" for "Dominik Hanke" as multiple people could have the same first name.
 
-If you're managing the server alone, the easiest thing to remembe is your first name.
+If you're managing the server alone, the easiest thing to remember is your first name.
 
 ### Create the user and change the password
 
@@ -51,14 +51,12 @@ su - <b>{username}</b>
 
 Create the SSH directory:  
 <pre>
-mkdir .ssh
-chmod 700 .ssh
+mkdir .ssh &amp;&amp; chmod 700 .ssh
 </pre>
 
 Create an __authorized_keys__ file:  
-</pre>
-touch .ssh/authorized_keys
-chmod 600 .ssh/authorized_keys
+<pre>
+touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys
 </pre>
 
 Add your SSH key to the file:  
@@ -70,6 +68,13 @@ Press [Ctrl] + [d] twice, to logout of the server.
 Login with the new user:  
 <pre>
 ssh <b>{username}</b>@<b>{ip address}</b>
+</pre>
+
+## Install Git
+
+If there's no git installed in your image, let's do this now, because we need it for the starter files:  
+<pre>
+sudo apt-get install git -y
 </pre>
 
 ## Clone the starter files

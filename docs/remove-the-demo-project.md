@@ -10,7 +10,7 @@ Remove the process from the init system:
 <pre>
 sudo systemctl stop node-boilerplate.<b>{your domain}</b>
 sudo systemctl disable node-boilerplate.<b>{your domain}</b>
-sudo rm /etc/systemd/system/node-boilerplate.<b>{your-domain}</b>
+sudo rm /etc/systemd/system/node-boilerplate.<b>{your-domain}</b>.service
 </pre>
 
 ## Remove the database and user
@@ -33,13 +33,6 @@ db.runCommand( { dropAllUsersFromDatabase: 1, writeConcern: { w: "majority" } } 
 db.dropDatabase()
 </pre>
 
-Remove the user:  
-<pre>
-use admin
-db.dropUser('boilerplate')
-exit
-</pre>
-
 ## Remove nginx configuration
 
 Remove the configuration file:  
@@ -57,15 +50,6 @@ sudo service nginx restart
 Remove the web root:  
 <pre>
 sudo rm -rf /var/www/node/boilerplate.<b>{your domain}</b>
-</pre>
-
-## Remove starter files
-
-You can keep the starter files for reference, to copy &amp; paste when adding new applications and configurations, or just delete them.  
-
-If you want to delete the starter files, run the following command:  
-<pre>
-rm -rf ~/simple-node-server/
 </pre>
 
 ---

@@ -2,7 +2,7 @@
 
 This tutorial will guide you to setup a secure server for running multiple [Node.js](https://nodejs.org/en/) applications with TLS encryption and a local [MongoDB](https://www.mongodb.com/) database. By using the [nginx](https://nginx.org/) webserver in front of Node.js we are able to run as many applications (with different domains) as we like.
 
-Some parts of the tutorial, like setting up a local MongoDB server or Let's encrypt for TLS encryption can be skipped, if you don't need them.
+Some parts of the tutorial, like setting up a local MongoDB server or [Let's Encrypt](https://letsencrypt.org/) for TLS encryption can be skipped, if you don't need them.
 
 We'll also learn how to setup Node.js applications as system services that restart themselves on a crash and that run automatically on boot.
 
@@ -33,23 +33,35 @@ I suggest to create a text file where you store the details you use during this 
 
 *new-server-config.txt*
 ```
-Domain:
-your-domain.com
+[ General ]
 
-Hostname:
-node1.prod.your-domain.com
+  [ Host Configuration ]
 
-User:
-peter
+    Domain:
+    your-domain.com
 
-Password:
-l0gM3!N?7&hc0m3L3tM3!nN0Wpl§$5%3
+    Hostname:
+    node1.prod.your-domain.com
 
-MongoDB User:
-dbManager
+  [ SSH ]
 
-MongoDB Password:
-my53cur3L=g1nF/rd43m-nm0ng0DB
+    Username:    peter
+    Password:    l0gM3!N?7&hc0m3L3tM3!nN0Wpl§$5%3
+    Passphrase:  53Cur3P455pHr4%3f=r55hK35t054v3
+
+[ MongoDB ]
+
+  [ Administrative User ]
+
+    Database:  admin
+    Username:  dbManager
+    Password:  my53cur3L=g1nF0rd43mNm0ng0DB
+
+  [ Boilerplate User ]
+
+    Database:  boilerplate
+    Username:  boilerplate
+    Password:  my53cur3L=g1nF0rB01lerPl4T3
 ```
 
 # Basic nano commands

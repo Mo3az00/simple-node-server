@@ -4,7 +4,7 @@ We will install a demo application using Node.js, Express and MongoDB to test ou
 
 ## Create a database user
 
-We want to creat a user per project database, to limit the access.
+We want to create a user per project database, to limit the access.
 
 Connect to the Mongo shell:  
 <pre>
@@ -27,11 +27,6 @@ db.createUser(
 </pre>
 
 ## Clone the repository and install dependencies
-
-If there's no git installed in your image, let's do this now:  
-<pre>
-sudo apt-get install git -y
-</pre>
 
 We create a web root folder and clone the repository of a demo boilerplate.  
 I suggest to use a folder /var/www/node/ to store all your node applications.
@@ -79,7 +74,7 @@ sudo nano /etc/nginx/conf.d/boilerplate.<b>{your domain}</b>.conf
 
 Update the following line and replace the placeholder:  
 <pre>
-    server_name boilerplate.<b>{your domain}</b>;
+server_name boilerplate.<b>{your domain}</b>;
 </pre>
 
 Check if the configuration is working:  
@@ -95,7 +90,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 If it doesn't, please check if you missed a semicolon or broke something during copy &amp; paste.
 
-When everthing is fine, restart the nginx server:  
+When everything is fine, restart the nginx server:  
 <pre>
 sudo service nginx restart
 </pre>
@@ -113,10 +108,9 @@ If everything works well and there are no errors in your configurations you shou
 
 <pre>
 http://boilerplate.<b>{your domain}</b>
-```
 </pre>
 
-Now, that we've seen that everything works, we'll stop the application by pressing [Strg] + [c] in the terminal to cancel the Node.js process.
+Now, that we've seen that everything works, we'll stop the application by pressing [Ctrl] + [c] in the terminal to cancel the Node.js process.
 
 We'll learn how to setup our application as a system service in the next step.
 

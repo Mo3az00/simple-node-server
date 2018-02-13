@@ -19,7 +19,7 @@ We have 5 settings that are interesting to change for most applications:
 |:------|:----------|
 |Description|The description of the service you want to add|
 |User|The user used to run the startup script|
-|Evironment|Environment variables that your application can read|
+|Environment|Environment variables that your application can read|
 |WorkingDirectory|The directory in which the application code is stored|
 |ExecStart|The command to run to start the application|
 
@@ -31,7 +31,7 @@ sudo nano /etc/systemd/system/node-boilerplate.<b>{your domain}</b>.service
 WorkingDirectory=/var/www/node/boilerplate.<b>{your domain}</b>
 </pre>
 
-## Test new service
+## Test the new service
 
 Let's try to run our new service:  
 <pre>
@@ -53,7 +53,7 @@ node-boilerplate.{your domain}.service.service - Express + Mongo Boilerplate
            └─29359 /usr/bin/node start.js
 </pre>
 
-When everything worked, we can add the service to the system boot so that it's started automatically everytime the server is booting.
+When everything worked, we can add the service to the system boot so that it's started automatically every time the server is booting.
 
 <pre>
 sudo systemctl enable node-boilerplate.<b>{your domain}</b>

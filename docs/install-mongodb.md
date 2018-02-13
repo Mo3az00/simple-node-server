@@ -19,7 +19,7 @@ gpg: Total number processed: 1
 gpg:               imported: 1  (RSA: 1)
 </pre>
 
-Add the repository to apt, but be sure to __update the bold MongoDB version__ befor you run this command. You can get the up-to-date command on the [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition).
+Add the repository to apt, but be sure to __update the bold MongoDB version__ before you run this command. You can get the up-to-date command on the [MongoDB documentation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition).
 
 <pre>
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/<b>3.6</b> multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-<b>3.6</b>.list
