@@ -19,15 +19,15 @@ ssh-keygen -t rsa -b 4096 -C "<b>{username}</b>@node1.prod.<b>{your domain}</b>"
 
 We will add the generated key as "Deploy key" to github, with read-only access, to reduce unnecessary security risks. Go to your github project page, choose the tab "Settings" and click on "Deploy keys" in the sidebar on the left.
 
-<img src="./images/github-deploy-keys.jpg" alt="Photo: Github deploy key management page" width="600">
+<img src="./images/github-deploy-keys.jpg" alt="Photo: Github deploy key management page" width="650">
 
 Click on the button "Add deploy key" on the top-right and paste your deployment key into the form.
 
-<img src="./images/github-deploy-keys-2.jpg" alt="Photo: Github deploy key dialog for adding" width="480">
+<img src="./images/github-deploy-keys-2.jpg" alt="Photo: Github deploy key dialog for adding" width="520">
 
 You key will be shown as never used in the list.
 
-<img src="./images/github-deploy-keys-3.jpg" alt="Photo: Updated Github deploy key list" width="480">
+<img src="./images/github-deploy-keys-3.jpg" alt="Photo: Updated Github deploy key list" width="520">
 
 ## Clone the repository on your server
 
