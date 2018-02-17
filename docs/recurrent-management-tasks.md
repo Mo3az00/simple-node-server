@@ -12,12 +12,12 @@ There's a software package to automatically install important security updates w
 
 Install the needed package:  
 <pre>
-sudo apt install unattended-upgrades
+sudo apt install unattended-upgrades -y
 </pre>
 
 Open the config file:  
 <pre>
-sudo nano 
+sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
 </pre>
 
 Update the following line to get details about updates in your inbox:  
@@ -43,7 +43,7 @@ APT::Periodic::AutocleanInterval "7";
 
 Install the "apticron" package, that send you emails about updates that are not installed automatically:  
 <pre>
-sudo apt-get install apticron
+sudo apt-get install apticron -y
 </pre>
 
 Edit the config file and add your email address:  
