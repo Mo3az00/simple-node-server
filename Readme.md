@@ -93,5 +93,5 @@ We will use the [nano](https://www.nano-editor.org/) editor in this tutorial, bu
 1. [Install Let's Encrypt](./docs/install-lets-encrypt.md)
 1. [Remove the demo project](./docs/reove-the-demo-project.md)
 1. [Add your own application](./docs/add-your-own-application.md)
-1. [Recurrent management tasks](./docs/recurring-management-tasks.md)
+1. [Recurrent management tasks](./docs/recurrent-management-tasks.md)
 1. [The End](./docs/the-end.md)
