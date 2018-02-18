@@ -63,7 +63,7 @@ Open the new configuration:
 sudo nano /etc/nginx/conf.d/<b>{application domain}</b>.conf
 </pre>
 
-Update the following lines and replace the the application domain and the port used:  
+Update the following lines and replace the the application domain and the port used, but __do not__ remove the #hashes in front of the 3 SSL lines now:  
 <pre>
 server_name <b>{application domain}</b>;
 server {
@@ -76,9 +76,9 @@ server {
     ...
     server_name <b>{application domain}</b>;
 
-	ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
-	ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+	#ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+	#ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
+	#ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
     ...
     location / {
         proxy_pass http://localhost:<b>{application port}</b>;
@@ -147,6 +147,29 @@ IMPORTANT NOTES:
 
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
+</pre>
+
+## Activate the certificate
+
+Open the nginx host configuration:  
+<pre>
+sudo nano /etc/nginx/conf.d/<b>{application domain}</b>.conf
+</pre>
+
+Update the following lines and remove the #hashes in front of them:
+<pre>
+server {
+    ...
+	ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
+	ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+    ...
+}
+</pre>
+
+Restart the nginx server:
+<pre>
+sudo service nginx restart
 </pre>
 
 ## Test the setup
