@@ -6,7 +6,7 @@ We will not talk about Continuous Integration in this tutorial, as it would go b
 
 ## Create a SSH key on the server
 
-As a first step we will create a SSH key on the server, that we will use for pulling code from Github. We use our usename and the hostname in the comment section. Press [Enter] for all questions asked and the key will be generated.
+As a first step we will create a SSH key on the server, that we will use for pulling code from Github. We use our username and the hostname in the comment section. Press [Enter] for all questions asked and the key will be generated.
 
 As we will use this key for reading from Github only and the code is on our server anyway, this is no security risk. You only have __to ensure__ that the key is __not used for other purposes__.
 
@@ -50,6 +50,30 @@ cd /var/www/node/<b>{application domain}</b> &amp;&amp; npm install
 </pre>
 
 If your application has additional build / setup scripts, run them now. And if you have to set environment variables, this is again the right time to do that.
+
+## Add a MongoDB User, if needed
+
+If your application needs a MongoDB database, create a new user used for the connection.
+
+Connect to the Mongo shell:  
+<pre>
+sudo mongo
+</pre>
+
+Create the new user:  
+<pre>
+use admin
+db.auth('databaseManager', '<b>{your db admin password}</b>')
+
+use <b>{app database name}</b>
+db.createUser(
+  {
+    user: "<b>{app database username}</b>",
+    pwd: "<b>{app database password}</b>",
+    roles: [ { role: "readWrite", db: "<b>{app database name}</b>" } ]
+  }
+);
+</pre>
 
 ## Add a new nginx host
 
