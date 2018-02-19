@@ -47,6 +47,7 @@ I suggest to create a text file where you store the details you use during this 
 
     Username:    peter
     Password:    l0gM3!N?7&hc0m3L3tM3!nN0Wpl§$5%3
+    Login:       ssh peter@node1.prod.your-domain.com
 
 [ MongoDB ]
 
