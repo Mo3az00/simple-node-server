@@ -47,7 +47,6 @@ I suggest to create a text file where you store the details you use during this 
 
     Username:    peter
     Password:    l0gM3!N?7&hc0m3L3tM3!nN0Wpl§$5%3
-    Passphrase:  53Cur3P455pHr4%3f=r55hK35t054v3
 
 [ MongoDB ]
 
