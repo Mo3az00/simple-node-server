@@ -72,9 +72,12 @@ Open the new configuration:
 sudo nano /etc/nginx/conf.d/boilerplate.<b>{your domain}</b>.conf
 </pre>
 
-Update the following line and replace the placeholder:  
+Update the following lines and replace the placeholder:  
 <pre>
 server_name boilerplate.<b>{your domain}</b>;
+
+access_log /var/log/nginx/<b>{your domain}</b>-access.log;
+error_log /var/log/nginx/<b>{your domain}</b>-error.log;
 </pre>
 
 Check if the configuration is working:  

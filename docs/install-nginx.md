@@ -68,6 +68,9 @@ sudo nano /etc/nginx/conf.d/default.conf
 Update the following lines and replace placeholders:  
 <pre>
     server_name <b>{your hostname}</b>;
+    
+    access_log /var/log/nginx/<b>{your hostname}</b>.access.log;
+    error_log /var/log/nginx/<b>{your hostname}</b>.error.log;
 </pre>
 
 ---
