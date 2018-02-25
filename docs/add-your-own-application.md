@@ -89,7 +89,6 @@ sudo nano /etc/nginx/conf.d/<b>{application domain}</b>.conf
 
 Update the following lines and replace the the application domain and the port used, but __do not__ remove the #hashes in front of the 3 SSL lines now:  
 <pre>
-server_name <b>{application domain}</b>;
 server {
     ...
     server_name <b>{application domain}</b>;

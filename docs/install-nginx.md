@@ -31,6 +31,7 @@ Remove the hashes before these 2 lines:
 Add the following lines inside the "http" block:  
 <pre>
     gzip_disable "msie6";
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg image/svg+xml;
     tcp_nodelay on;
     server_names_hash_bucket_size 128;
 </pre>

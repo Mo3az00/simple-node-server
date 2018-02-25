@@ -47,7 +47,7 @@ I suggest to create a text file where you store the details you use during this 
 
     Username:    peter
     Password:    l0gM3!N?7&hc0m3L3tM3!nN0Wpl§$5%3
-    Passphrase:  53Cur3P455pHr4%3f=r55hK35t054v3
+    Login:       ssh peter@node1.prod.your-domain.com
 
 [ MongoDB ]
 
@@ -89,9 +89,9 @@ We will use the [nano](https://www.nano-editor.org/) editor in this tutorial, bu
 1. [Install MongoDB](./docs/install-mongodb.md)
 1. [Install nginx](./docs/install-nginx.md)
 1. [Install a demo project](./docs/install-a-demo-project.md)
-1. [Install a system service](./docs/install-system-service.md)
+1. [Install a system service](./docs/install-a-system-service.md)
 1. [Install Let's Encrypt](./docs/install-lets-encrypt.md)
-1. [Remove the demo project](./docs/reove-the-demo-project.md)
+1. [Remove the demo project](./docs/remove-the-demo-project.md)
 1. [Add your own application](./docs/add-your-own-application.md)
 1. [Recurrent management tasks](./docs/recurrent-management-tasks.md)
 1. [The End](./docs/the-end.md)
