@@ -104,6 +104,9 @@ server {
 	#ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
 	#ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
     ...
+    access_log /var/log/nginx/<b>{application domain}</b>-access.log;
+    error_log /var/log/nginx/</b>{application domain}</b>-error.log;
+    ...
     location / {
         proxy_pass http://localhost:<b>{application port}</b>;
         ...
