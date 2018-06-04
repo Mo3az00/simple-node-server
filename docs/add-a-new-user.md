@@ -30,7 +30,7 @@ passwd <b>{username}</b>
 
 ### Add sudo access
 
-Open the [sudo](https://www.howtoforge.com/tutorial/sudo-beginners-guide/) configuration in the nano editor <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">(basic nano commands)</a>:
+Open the [sudo](https://www.howtoforge.com/tutorial/sudo-beginners-guide/) configuration in the nano editor <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">(basic nano commands)</a>:
 
 <pre>
 nano /etc/sudoers
@@ -49,7 +49,7 @@ The result should look something like this:
 <img src="./images/nano.jpg" alt="Click the droplet button" width="530"/>
 
 <Enter>
-Exit nano with `ctrl+x` - <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">according to the nano reference</a>
+Exit nano with `ctrl+x` - <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">according to the nano reference</a>
 
 
 ### Add your SSH key
@@ -69,16 +69,17 @@ Create an __authorized_keys__ file:
 touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys
 </pre>
 
-Add your SSH key to the file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
+Add your SSH key to the file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">nano</a>:
 <pre>
 nano .ssh/authorized_keys
 </pre>
 
-Press [Ctrl] + [d] twice, to logout of the server.
-Login with the new user:
+ **IMPORTANT**: Before you log out from the server, open a new terminal and login as the new user to check you can login as the new user:
+
 <pre>
 ssh <b>{username}</b>@<b>{ip address}</b>
 </pre>
+Then press [Ctrl] + [d] twice, to logout of the server.
 
 ## Install Git
 

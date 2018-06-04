@@ -1,6 +1,10 @@
+
 # Adding Security
 
 ## Block root access
+
+**IMPORTANT:**
+>If you are working/logged in as `root` (bad-practise) this can lead to loosing control over the server! So if you start, keep always a window open where you are logged in as root user. So you can undo changes if there are problems with the new user.
 
 Open the SSH configuration with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
@@ -194,3 +198,4 @@ net.ipv4.conf.all.log_martians = 1
 
 ---
 __Next:__ [Install Node.js](./install-nodejs.md)
+_Next:__ [Install Node.js](./install-nodejs.md)
