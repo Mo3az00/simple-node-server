@@ -8,12 +8,12 @@ Let's start by creating a unit file for our application.
 
 ## Create a unit file
 
-Copy the unit file from the starter files to systemd services:  
+Copy the unit file from the starter files to systemd services:
 <pre>
 sudo cp ~/simple-node-server/starter-files/boilerplate.service /etc/systemd/system/node-boilerplate.<b>{your domain}</b>.service
 </pre>
 
-We have 5 settings that are interesting to change for most applications:  
+We have 5 settings that are interesting to change for most applications:
 
 |Setting|Description|
 |:------|:----------|
@@ -23,7 +23,7 @@ We have 5 settings that are interesting to change for most applications:
 |WorkingDirectory|The directory in which the application code is stored|
 |ExecStart|The command to run to start the application|
 
-Open the new unit file and update the working directory:  
+Open the new unit file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a> and update the working directory:  
 <pre>
 sudo nano /etc/systemd/system/node-boilerplate.<b>{your domain}</b>.service
 </pre>
@@ -33,17 +33,17 @@ WorkingDirectory=/var/www/node/boilerplate.<b>{your domain}</b>
 
 ## Test the new service
 
-Let's try to run our new service:  
+Let's try to run our new service:
 <pre>
 sudo systemctl start node-boilerplate.<b>{your domain}</b>
 </pre>
 
-Verify that it's running:  
+Verify that it's running:
 <pre>
 sudo systemctl status node-boilerplate.<b>{your domain}</b>
 </pre>
 
-The output should look like this:  
+The output should look like this:
 <pre>
 node-boilerplate.{your domain}.service.service - Express + Mongo Boilerplate
    Loaded: loaded (/etc/systemd/system/node-boilerplate.your-domain.com.service; disabled; vendor preset: enabled)

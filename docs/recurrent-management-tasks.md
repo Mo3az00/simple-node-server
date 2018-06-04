@@ -10,29 +10,29 @@ We will install some helpers to make your life as an admin a bit easier.
 
 There's a software package to automatically install important security updates without asking or waiting for an administrator. This is especially useful for security updates, as zero-day attacks can be prevented.
 
-Install the needed package:  
+Install the needed package:
 <pre>
 sudo apt install unattended-upgrades -y
 </pre>
 
-Open the config file:  
+Open the config file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
 sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
 </pre>
 
-Update the following line to get details about updates in your inbox:  
+Update the following line to get details about updates in your inbox:
 <pre>
 ...
 Unattended-Upgrade::Mail "<b>{your email}</b>";
 ...
 </pre>
 
-We can enable the automatic updates by editing the following file:  
+We can enable the automatic updates by editing the following file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
 sudo nano /etc/apt/apt.conf.d/20auto-upgrades
 </pre>
 
-Update the config to this:  
+Update the config to this:
 <pre>
 APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Unattended-Upgrade "1";
@@ -41,12 +41,12 @@ APT::Periodic::AutocleanInterval "7";
 
 ## Install package monitoring
 
-Install the "apticron" package, that send you emails about updates that are not installed automatically:  
+Install the "apticron" package, that send you emails about updates that are not installed automatically:
 <pre>
 sudo apt-get install apticron -y
 </pre>
 
-Edit the config file and add your email address:  
+Edit the config file with nano <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>and add your email address:
 <pre>
 sudo nano /etc/apticron/apticron.conf
 </pre>
@@ -56,7 +56,7 @@ EMAIL="<b>{your email}</b>"
 
 ## Update packages manually
 
-To run manual package updates you can use the following command:  
+To run manual package updates you can use the following command:
 <pre>
 sudo apt-get update &amp;&amp; sudo apt-get upgrade
 </pre>

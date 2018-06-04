@@ -6,12 +6,12 @@ We will install a demo application using Node.js, Express and MongoDB to test ou
 
 We want to create a user per project database, to limit the access.
 
-Connect to the Mongo shell:  
+Connect to the Mongo shell:
 <pre>
 sudo mongo
 </pre>
 
-Create the new user:  
+Create the new user:
 <pre>
 use admin
 db.auth('databaseManager', '<b>{your db admin password}</b>')
@@ -28,7 +28,7 @@ db.createUser(
 
 ## Clone the repository and install dependencies
 
-We create a web root folder and clone the repository of a demo boilerplate.  
+We create a web root folder and clone the repository of a demo boilerplate.
 I suggest to use a folder /var/www/node/ to store all your node applications.
 
 <pre>
@@ -40,13 +40,14 @@ npm install
 
 ## Configure the application
 
-Create a local configuration file and edit it with nano:  
+Copy the sample config file with the cp command. (_Syntax_: `cp source target`) file and edit it with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
+
 cp variables.env.sample variables.env
 nano variables.env
 </pre>
 
-Update the following config lines:  
+Update the following config lines:
 <pre>
 NODE_ENV=production
 
@@ -62,17 +63,17 @@ DATABASE_NAME=boilerplate
 
 ## Create the host configuration
 
-Copy the template from the starter files:  
+Copy the template from the starter files:
 <pre>
 sudo cp ~/simple-node-server/starter-files/nginx/boilerplate.conf /etc/nginx/conf.d/boilerplate.<b>{your domain}</b>.conf
 </pre>
 
-Open the new configuration:  
+Open the new configuration file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
 sudo nano /etc/nginx/conf.d/boilerplate.<b>{your domain}</b>.conf
 </pre>
 
-Update the following lines and replace the placeholder:  
+Update the following lines and replace the placeholder:
 <pre>
 server_name boilerplate.<b>{your domain}</b>;
 
@@ -80,12 +81,12 @@ access_log /var/log/nginx/<b>{your domain}</b>-access.log;
 error_log /var/log/nginx/<b>{your domain}</b>-error.log;
 </pre>
 
-Check if the configuration is working:  
+Check if the configuration is working:
 <pre>
 sudo service nginx configtest
 </pre>
 
-The result should look like this:  
+The result should look like this:
 <pre>
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
@@ -93,7 +94,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 If it doesn't, please check if you missed a semicolon or broke something during copy &amp; paste.
 
-When everything is fine, restart the nginx server:  
+When everything is fine, restart the nginx server:
 <pre>
 sudo service nginx restart
 </pre>

@@ -44,7 +44,7 @@ git clone git@github.com:noreading/express-mongoose-boilerplate.git /var/www/nod
 
 ## Install needed packages &amp; run build commands
 
-Run the package installation:  
+Run the package installation:
 <pre>
 cd /var/www/node/<b>{application domain}</b> &amp;&amp; npm install
 </pre>
@@ -55,12 +55,12 @@ If your application has additional build / setup scripts, run them now. And if y
 
 If your application needs a MongoDB database, create a new user used for the connection.
 
-Connect to the Mongo shell:  
+Connect to the Mongo shell:
 <pre>
 sudo mongo
 </pre>
 
-Create the new user:  
+Create the new user:
 <pre>
 use admin
 db.auth('databaseManager', '<b>{your db admin password}</b>')
@@ -77,17 +77,17 @@ db.createUser(
 
 ## Add a new nginx host
 
-Copy the template from the starter files:  
+Copy the template from the starter files:
 <pre>
 sudo cp ~/simple-node-server/starter-files/nginx/application.conf /etc/nginx/conf.d/<b>{application domain}</b>.conf
 </pre>
 
-Open the new configuration:  
+Open the new configuration with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
 sudo nano /etc/nginx/conf.d/<b>{application domain}</b>.conf
 </pre>
 
-Update the following lines and replace the the application domain and the port used, but __do not__ remove the #hashes in front of the 3 SSL lines now:  
+Update the following lines and replace the the application domain and the port used, but __do not__ remove the #hashes in front of the 3 SSL lines now:
 <pre>
 server {
     ...
@@ -99,9 +99,9 @@ server {
     ...
     server_name <b>{application domain}</b>;
 
-	#ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
-	#ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
-	#ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+  #ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+  #ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
+  #ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
     ...
     access_log /var/log/nginx/<b>{application domain}</b>-access.log;
     error_log /var/log/nginx/</b>{application domain}</b>-error.log;
@@ -118,12 +118,12 @@ Update the following line and replace the port number with the one you want to u
 proxy_pass http://localhost:7000;
 </pre>
 
-Check if the configuration is working:  
+Check if the configuration is working:
 <pre>
 sudo service nginx configtest
 </pre>
 
-The result should look like this:  
+The result should look like this:
 <pre>
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
@@ -131,19 +131,19 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 If it doesn't, please check if you missed a semicolon or broke something during copy &amp; paste.
 
-When everything is fine, restart the nginx server:  
+When everything is fine, restart the nginx server:
 <pre>
 sudo service nginx restart
 </pre>
 
 ## Generate a Let's Encrypt certificate
 
-Now, that we've prepared the nginx configuration, we're able to request a new certificate for our application domain:  
+Now, that we've prepared the nginx configuration, we're able to request a new certificate for our application domain:
 <pre>
 sudo certbot certonly --webroot --agree-tos --no-eff-email --email <b>{your email}</b> -w /var/www/letsencrypt -d <b>{application domain}</b>
 </pre>
 
-The result should look like this:  
+The result should look like this:
 <pre>
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator webroot, Installer None
@@ -177,7 +177,7 @@ IMPORTANT NOTES:
 
 ## Activate the certificate
 
-Open the nginx host configuration:  
+Open the nginx host configuration with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:
 <pre>
 sudo nano /etc/nginx/conf.d/<b>{application domain}</b>.conf
 </pre>
@@ -186,9 +186,9 @@ Update the following lines and remove the #hashes in front of them:
 <pre>
 server {
     ...
-	ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
-	ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+  ssl_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/<b>{application domain}</b>/privkey.pem;
+  ssl_trusted_certificate /etc/letsencrypt/live/<b>{application domain}</b>/fullchain.pem;
     ...
 }
 </pre>
@@ -216,12 +216,12 @@ http://<b>{application domain}</b>
 
 ## Create a unit file
 
-Copy the unit file from the starter files to systemd services:  
+Copy the unit file from the starter files to systemd services:
 <pre>
 sudo cp ~/simple-node-server/starter-files/application.service /etc/systemd/system/node-<b>{your domain}</b>.service
 </pre>
 
-We have 5 settings that are interesting to change for most applications:  
+We have 5 settings that are interesting to change for most applications:
 
 |Setting|Description|
 |:------|:----------|
@@ -231,7 +231,7 @@ We have 5 settings that are interesting to change for most applications:
 |WorkingDirectory|The directory in which the application code is stored|
 |ExecStart|The command to run to start the application|
 
-Open the new unit file and replace the placeholders:  
+Open the new unit file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a> and replace the placeholders:
 <pre>
 sudo nano /etc/systemd/system/node-<b>{your domain}</b>.service
 </pre>
@@ -250,12 +250,12 @@ WantedBy=multi-user.target
 
 ## Test the new service
 
-Let's try to run our new service:  
+Let's try to run our new service:
 <pre>
 sudo systemctl start node-<b>{application domain}</b>
 </pre>
 
-Verify that it's running:  
+Verify that it's running:
 <pre>
 sudo systemctl status node-<b>{application domain}</b>
 </pre>

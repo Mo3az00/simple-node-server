@@ -2,12 +2,12 @@
 
 ## Add the official repository
 
-Add the repository key:  
+Add the repository key:
 <pre>
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 </pre>
 
-The result should look similar to this:  
+The result should look similar to this:
 <pre>
 Executing: /tmp/tmp.0UpmDNT4uT/gpg.1.sh --keyserver
 hkp://keyserver.ubuntu.com:80
@@ -27,7 +27,7 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongod
 
 ## Install MongoDB
 
-Update the package lists:  
+Update the package lists:
 <pre>
 sudo apt-get update
 </pre>
@@ -38,19 +38,19 @@ Install the ```mongodb-org``` meta package, which includes the daemon, configura
 sudo apt-get install mongodb-org -y
 </pre>
 
-Create the data director:  
+Create the data director:
 <pre>
 sudo mkdir -p /data/db
 sudo chown mongodb:mongodb /data/db
 </pre>
 
-Start the MongoDB daemon and check the status:  
+Start the MongoDB daemon and check the status:
 <pre>
 sudo systemctl start mongod
 sudo systemctl status mongod
 </pre>
 
-The output of the status check should look similar to this:  
+The output of the status check should look similar to this:
 <pre>
 mongod.service - High-performance, schema-free document-oriented database
    Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
@@ -64,14 +64,14 @@ mongod.service - High-performance, schema-free document-oriented database
            └─22069 /usr/bin/mongod --config /etc/mongod.conf
 </pre>
 
-Add MongoDB daemon to system startup:  
+Add MongoDB daemon to system startup:
 <pre>
 sudo systemctl enable mongod
 </pre>
 
 ## Add an administrative user
 
-To add a user, we'll connect to the Mongo shell:  
+To add a user, we'll connect to the Mongo shell:
 <pre>
 sudo mongo
 </pre>
@@ -109,41 +109,41 @@ Type ```exit``` and press [Enter] to leave the client.
 
 ## Enabling Authentication
 
-Open the mongodb.conf file:  
+Open the mongodb.conf file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="_blank">nano</a>:  
 <pre>
 sudo nano /etc/mongod.conf
 </pre>
 
-In the "#security" section we remove the hash to enable it and add the authorization setting:  
+In the "#security" section we remove the hash to enable it and add the authorization setting:
 <pre>
 security:
   authorization: enabled
 </pre>
 
-Restart the daemon to activate authorization:  
+Restart the daemon to activate authorization:
 <pre>
 sudo systemctl restart mongod
 </pre>
 
 ## Verify authorization
 
-Open the Mongo shell:  
+Open the Mongo shell:
 <pre>
 sudo mongo
 </pre>
 
-Select the admin database:  
+Select the admin database:
 <pre>
 use admin
 </pre>
 
-Try to authenticate as the admin user:  
+Try to authenticate as the admin user:
 <pre>
 db.auth('databaseManager', '<b>{your secure password}</b>')
 </pre>
 
-If the result is not only "1", something went wrong copy &amp; pasting.  
-This is what the full verification should look like:  
+If the result is not only "1", something went wrong copy &amp; pasting.
+This is what the full verification should look like:
 <pre>
 > use admin
 switched to db admin
