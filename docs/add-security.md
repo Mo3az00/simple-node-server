@@ -198,4 +198,3 @@ net.ipv4.conf.all.log_martians = 1
 
 ---
 __Next:__ [Install Node.js](./install-nodejs.md)
-_Next:__ [Install Node.js](./install-nodejs.md)
