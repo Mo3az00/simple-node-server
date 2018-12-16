@@ -1,12 +1,10 @@
 # Register a free DigitalOcean account
 
-__Note:__ If you want to use another provider for your server you can skip this and the next step.
-
 ## Why DigitalOcean?
 
 [DigitalOcean](https://www.digitalocean.com/) is known for fast and reliable servers at an affordable price, with lots of great features that can be added later, if they are needed.
 
-The smallest droplet can handle multiple Node.js applications or start multiple process of the same application and costs only $5 per month (2018-02-12).
+The smallest droplet can handle multiple Node.js applications or start multiple process of the same application and costs only \$5 per month (current price at 15th of December 2018).
 
 ## Sign up
 
@@ -16,7 +14,8 @@ You need to wait for an activation email and click on the link inside. It can al
 
 ## Next step
 
-In the next step we'll create your first cloud server.   
+You will begin to create your first cloud server in the next step.
 
 ---
-__Next:__ [Create your first droplet](./create-your-first-droplet.md)
+
+**Next:** [Create your first droplet](./create-your-first-droplet.md)

@@ -2,15 +2,16 @@
 
 ## Get the IP address
 
-Copy the IP address of your new droplet from the [droplet management](https://cloud.digitalocean.com/droplets) page. If you click on the IP address it will automatically get copied to your clipboard.
+Copy the IP address of your new droplet from the [droplet management](https://cloud.digitalocean.com/droplets) page. If you click on the IP address it will automatically be copied to your clipboard.
 
-<img src="./images/do-get-ip.jpg" alt="SSH Key Management page" width="500">
+<img src="./images/digitalocean-droplet-copy-ip.png" alt="Screenshot: Copy the IP address of the droplet" width="500">
 
 ## Login to your server
 
-The commands of this tutorial can be run in any terminal on Ubuntu or Mac computers. For Windows you need a linux shell like Git Bash (comes together with Git) or [Cygwin](http://www.cygwin.com/).
+The commands of this tutorial can be run in any terminal on Ubuntu or Mac computers. For Windows you need a linux shell like [Git Bash](https://git-scm.com/downloads), [Cygwin](http://www.cygwin.com/) or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about).
 
 Use SSH to login:
+
 <pre>
 ssh root@<b>{ip address}</b>
 </pre>
@@ -21,7 +22,7 @@ It's common to use your real name as username, so that it's easy to remember. If
 
 If you're managing the server alone, the easiest thing to remember is your first name.
 
-### Create the user and change the password
+### Create the user and set a secure password
 
 <pre>
 useradd -m -s /bin/bash <b>{username}</b>
@@ -37,6 +38,7 @@ nano /etc/sudoers
 </pre>
 
 Enable **sudo access** for the new user by adding this two lines.
+
 <pre>
 # Allow user to execute any command without password prompt
 <b>{username}</b> ALL=(ALL) NOPASSWD:ALL
@@ -46,51 +48,64 @@ Enable **sudo access** for the new user by adding this two lines.
 
 The result should look something like this:
 
-<img src="./images/nano.jpg" alt="Click the droplet button" width="530"/>
+<img src="./images/server-edit-sudo.png" alt="Screenshot: Edit the /etc/sudoers" width="650"/>
 
-<Enter>
-Exit nano with `ctrl+x` - <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">according to the nano reference</a>
+Exit nano pressing `[Ctrl] + [x]` together (<a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">nano reference</a>).
 
+When nano asks if you want to save the modified buffer, enter "y" and press `[Enter]` twice.
 
 ### Add your SSH key
 
 Change your terminal session to that user:
+
 <pre>
 su - <b>{username}</b>
 </pre>
 
 Create the SSH directory:
+
 <pre>
 mkdir .ssh &amp;&amp; chmod 700 .ssh
 </pre>
 
-Create an __authorized_keys__ file:
+Create an **authorized_keys** file:
+
 <pre>
 touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys
 </pre>
 
-Add your SSH key to the file with <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">nano</a>:
+To read your local public key (if youse use only one) you can use the `cat` command or open the file in your editor of choice.
+
+<pre>
+cat ~/.ssh/id_rsa.pub
+</pre>
+
+Add the SSH key to the `authorized_keys` file in <a href="https://github.com/noreading/simple-node-server#basic-nano-commands" target="\_blank">nano</a>.
+
 <pre>
 nano .ssh/authorized_keys
 </pre>
 
- **IMPORTANT**: Before you log out from the server, open a new terminal and login as the new user to check you can login as the new user:
+**IMPORTANT**:  
+Before you log out from the server, open a second terminal and try to login as the new user to check if everything works as expected:
 
 <pre>
 ssh <b>{username}</b>@<b>{ip address}</b>
 </pre>
-Then press [Ctrl] + [d] twice, to logout of the server.
 
-## Install Git
+Then press `[Ctrl] + [d]` twice, to logout of the terminal where you are logged in as root user.
 
-If there's no git installed in your image, let's do this now, because we need it for the starter files:
+## Update packages
+
+As the server is new and the images prepared by DigitalOcean are not updated every day, we should do an initial update of all packages.
+
 <pre>
-sudo apt-get install git -y
+sudo apt update && sudo apt upgrade -y
 </pre>
 
 ## Clone the starter files
 
-Clone this repository into your home folder, to get files that you can edit and / or copy to their destination. This will speed up the configuration in the following steps.
+Clone this repository into your home folder, to get files that you can edit and / or copy to their destination. This will speed up the configuration in the following steps of this tutorial.
 
 <pre>
 cd ~
@@ -98,4 +113,5 @@ git clone https://github.com/noreading/simple-node-server.git
 </pre>
 
 ---
-__Next:__ [Adding security](./add-security.md)
+
+**Next:** [Adding security](./add-security.md)
